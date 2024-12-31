@@ -39,7 +39,6 @@ def compute_transformation_matrix(pts1, pts2):
         pts2 = np.array(pts2, dtype=np.float32).reshape(-1, 1, 2)
         H, _ = cv2.findHomography(pts1, pts2, cv2.RANSAC)
         
-        # Round the homography matrix to two decimal places
         if H is not None:
             H = np.round(H, 2)
         
@@ -108,13 +107,10 @@ def process_images():
             else:
                 output_text.insert(tk.END, f"Paper {i} Transformation Matrix:\n")
                 
-                # Define a small threshold for "zero" values
                 zero_threshold = 1e-6
 
-                # Format the matrix output to be user-friendly and remove negative zero
                 for row in result:
                     formatted_row = ' '.join([f"{val:.2f}" if abs(val) > zero_threshold else "0.00" for val in row])
-                    # Replace -0.00 with 0.00
                     output_text.insert(tk.END, formatted_row + "\n")
                 output_text.insert(tk.END, "\n")
 
