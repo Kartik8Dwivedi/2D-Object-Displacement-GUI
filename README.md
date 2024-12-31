@@ -13,7 +13,7 @@ This project introduces an efficient and robust methodology for detecting the tr
 
 ## Requirements
 
-- Python 3.x
+- Python
 - OpenCV
 - NumPy
 - Matplotlib
@@ -22,7 +22,41 @@ This project introduces an efficient and robust methodology for detecting the tr
 ## Installation
 
 1. **Clone the Repository**:
+
    ```sh
-   git clone https://github.com/your-username/file-theft-security.git
+   git clone https://github.com/Kartik8Dwivedi/File-Theft-Security
    cd file-theft-security
    ```
+
+2. Download the required packages.
+
+```bash
+    pip install opencv-python numpy
+```
+
+Note: Tkinter and Matplotlib are included in the Python standard library.
+
+3. **Run the Application**:
+
+   ```bash
+   python GUI_2D_OBJECT_DISPLACEMENT.py
+   ```
+
+4. **Using the GUI**:
+   - Click on the **Browse** buttons to select the two images.
+   - Click **Get Transformation Matrix** to calculate and display the results.
+   - The transformation matrix will be displayed in the text area below.
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions or improvements, feel free to fork the repository and submit a pull request.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+- OpenCV for providing powerful image processing tools.
+- Tkinter for making GUI development easy.
+- The open-source community for contributing to libraries and resources used in this project.
